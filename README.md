@@ -25,6 +25,7 @@ Ce projet est une application web de gestion des rendez-vous pour un cabinet mé
 
 Projet développé dans le cadre du tutoré Licence 2 GLAR - ESTM.  
 Responsable du groupe : Thiane BOYE
+
 Encadrant : M. Diouf Chérif (dioufcherif99@estm.edu.sn)
 
 ## Statut
