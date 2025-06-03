@@ -17,5 +17,5 @@ Ce projet présente mes réalisations, compétences et expériences dans le doma
 - PHP
 - MySQL
 - Python
-- MySQL
+- Git
 - GitHub
