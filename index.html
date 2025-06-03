@@ -36,23 +36,56 @@
             <h2>Mes Projets</h2>
             <div class="projects">
                 <div class="project-card">
-                    <h3>Projet 1</h3>
+                    <h3 class="project-title" onclick="toggleDetails(this)">Projet 1</h3>
                     <p>Création d’un bloc communautaire pour les étudiants de l’ESTM</p>
+                    <div class="project-details" style="display:none;">
+                        <p>
+                            Ce projet utilise HTML, JavaScript et PHP pour permettre aux étudiants de partager des ressources, discuter et organiser des événements. 
+                            Le backend gère l’authentification et la gestion des publications via une base de données MySQL.
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Projet 2</h3>
-                    <p>plateforme web de gestion d’étudiants et de QCM en ligne</p>
+                    <h3 class="project-title" onclick="toggleDetails(this)">Projet 2</h3>
+                    <p>Plateforme web de gestion d’étudiants et de QCM en ligne</p>
+                    <div class="project-details" style="display:none;">
+                        <p>
+                            Application web permettant l’inscription des étudiants et la création de QCM interactifs. 
+                            Utilisation de PHP/MySQL pour la logique serveur pour une expérience utilisateur fluide.
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Projet 3</h3>
+                    <h3 class="project-title" onclick="toggleDetails(this)">Projet 3</h3>
                     <p>Portfolio personnel interactif et responsive.</p>
+                    <div class="project-details" style="display:none;">
+                        <p>
+                            Site web réalisé en HTML5 et CSS3 intégrant une navigation fluide. 
+                            Le design est responsive pour s’adapter à tous les appareils.
+                        </p>
+                    </div>
                 </div>
                 <div class="project-card">
-                    <h3>Projet 4</h3>
+                    <h3 class="project-title" onclick="toggleDetails(this)">Projet 4</h3>
                     <p>Gestion des Rendez-vous - Cabinet Médicale</p>
+                    <div class="project-details" style="display:none;">
+                        <p>
+                            Système de prise de rendez-vous en ligne pour un cabinet médical, avec gestion des disponibilités, notifications par email et interface d’administration.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
+        <script>
+        function toggleDetails(element) {
+            const details = element.nextElementSibling.nextElementSibling;
+            if (details.style.display === "none") {
+                details.style.display = "block";
+            } else {
+                details.style.display = "none";
+            }
+        }
+        </script>
         <section id="skills">
             <h2>Compétences</h2>
             <div class="skills-list">
@@ -70,6 +103,19 @@
             <p>
                 Email : <a href="mailto:ndiawofall2003@gmail.com">ndiawofall2003@gmail.com</a>
             </p>
+
+            <p>
+                Téléphone : <a href="tel:+221772616980">+221 77 261 69 80</a>
+            </p>
+            <p>
+                Instagram : <a href="https://www.instagram.com/n_dia_wo" target="_blank">Mon Profil Instagram</a>
+            </p>
+
+            <p>
+                GitHub : <a href="https://github.com/Ndiawo03" target="_blank">Mon Profil GitHub</a>
+            </p>
+
+
         </section>
     </div>
     <footer>
