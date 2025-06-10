@@ -37,7 +37,7 @@
             <h2>Mes projets</h2>
             <div class="projects">
                 <div class="project-card">
-                    <img src="image_blog.png" alt="Bloc communautaire ESTM" style="width:100%; height:150px; object-fit:cover; border-radius:8px 8px 0 0;">
+                    <img src="image_blog.png" alt="Bloc communautaire ESTM" style="width:100%; height:150px; object-fit:cover; border-radius:8px 8px 0 0; cursor:pointer;" onclick="openModal(this)">
                     <h3 class="project-title" onclick="toggleDetails(this)">Projet 1</h3>
                     <p>Création d’un bloc communautaire pour les étudiants de l’ESTM</p>
                     <div class="project-details" style="display:none;">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="image_plateforme-qcm.png" alt="Gestion d’étudiants et QCM" style="width:100%; height:150px; object-fit:cover; border-radius:8px 8px 0 0;">
+                    <img src="image_plateforme-qcm.png" alt="Gestion d’étudiants et QCM" style="width:100%; height:150px; object-fit:cover; border-radius:8px 8px 0 0; cursor:pointer;" onclick="openModal(this)">
                     <h3 class="project-title" onclick="toggleDetails(this)">Projet 2</h3>
                     <p>Plateforme web de gestion d’étudiants et de QCM en ligne</p>
                     <div class="project-details" style="display:none;">
@@ -59,7 +59,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/projet3.jpg" alt="Portfolio personnel" style="width:100%; height:150px; object-fit:cover; border-radius:8px 8px 0 0;">
+                    <img src="images/projet3.jpg" alt="Portfolio personnel" style="width:100%; height:150px; object-fit:cover; border-radius:8px 8px 0 0; cursor:pointer;" onclick="openModal(this)">
                     <h3 class="project-title" onclick="toggleDetails(this)">Projet 3</h3>
                     <p>Portfolio personnel interactif et responsive.</p>
                     <div class="project-details" style="display:none;">
@@ -70,7 +70,7 @@
                     </div>
                 </div>
                 <div class="project-card">
-                    <img src="images/projet4.jpg" alt="Gestion des Rendez-vous Médical" style="width:100%; height:150px; object-fit:cover; border-radius:8px 8px 0 0;">
+                    <img src="images/projet4.jpg" alt="Gestion des Rendez-vous Médical" style="width:100%; height:150px; object-fit:cover; border-radius:8px 8px 0 0; cursor:pointer;" onclick="openModal(this)">
                     <h3 class="project-title" onclick="toggleDetails(this)">Projet 4</h3>
                     <p>Gestion des Rendez-vous - Cabinet Médicale</p>
                     <div class="project-details" style="display:none;">
@@ -79,6 +79,31 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <!-- Modal pour agrandir l'image -->
+            <div id="imgModal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+                <span onclick="closeModal()" style="position:absolute;top:24px;right:40px;font-size:48px;color:#fff;cursor:pointer;font-family:sans-serif;">&times;</span>
+                <img id="modalImg" src="" alt="" style="max-width:90vw; max-height:80vh; border-radius:12px; box-shadow:0 4px 32px #000;">
+            </div>
+            <script>
+                function openModal(img) {
+                    document.getElementById('imgModal').style.display = 'flex';
+                    document.getElementById('modalImg').src = img.src;
+                    document.getElementById('modalImg').alt = img.alt;
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeModal() {
+                    document.getElementById('imgModal').style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+                // Fermer le modal avec la touche Echap ou clic sur fond noir
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === "Escape") closeModal();
+                });
+                document.getElementById('imgModal').addEventListener('click', function(e) {
+                    if (e.target === this) closeModal();
+                });
+            </script>
             </div>
         </section>
         <script>
